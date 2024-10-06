@@ -47,6 +47,10 @@ mongoose.connect(
     console.log('Connected to MongoDB');
   },
 );
+
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
+});
 app.use('/api/projects', projectRoute);
 app.use('/api/pages', pageRoute);
 app.use('/api/assets', assetRoute);
